@@ -123,7 +123,7 @@ function loadCategories() {
     .then((response) => response.json())
     .then((categories) => {
       const categorySelect = document.getElementById('categorySelect');
-      
+
       // Clear existing options
       categorySelect.innerHTML = '';
 
@@ -168,6 +168,7 @@ document.getElementById('categorySelect').addEventListener('change', function ()
     loadProducts(); // Load all products if no category is selected
   }
 });
+
 // Add event listener to search button
 document.getElementById('searchButton').addEventListener('click', function () {
   const searchKeyword = document.getElementById('searchBar').value;
@@ -197,4 +198,3 @@ function loadProducts() {
 }
 
 loadProducts();
-
