@@ -148,7 +148,7 @@ function loadCategories() {
 loadCategories();
 
 function loadCategoryProducts(category) {
-  fetch(`https://dummyjson.com/products/category/${category}`)
+  fetch(`https://dummyjson.com/products/category/${category}?limit=50`)
     .then((response) => response.json())
     .then((data) => {
       const products = data.products;
@@ -184,7 +184,7 @@ function performSearch(keyword) {
 
 
 function loadProducts() {
-  fetch("https://dummyjson.com/products")
+  fetch("https://dummyjson.com/products?limit=100")
     .then((response) => response.json())
     .then((json) => {
       products = json.products;
